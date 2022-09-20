@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+  <!--Navigation Bar --->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="">Support</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+          <!--  <a class="nav-link" href="trackersection">Tracker</a>-->
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--Tracker Section --->
+  <section id="trackersection">
+
+    <!--Tracker Buttons-->
+    <div class="container">
+      <div class="row">
+        <div class="d-grid gap-2 col-2 mx-auto">
+          <h4 style="text-align:center;margin-top:5rem;margin-bottom:23rem;">TRACKER</h4>
+          <div class="btn-group dropend">
+            <button class="btn btn-outline-success" data-bs-toggle="modal" href="#meetingtrackertoggle" type="button">Meeting Tracker</button>
+            <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="visually-hidden">Toggle Dropend</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" onclick="reginsodbccopy()" style="font-size:12px;color:gray;" data-toggle="tooltip" data-placement="top" title="Copy to Clipboard">Registration and Installation Template - ODBC</a></li>
+              <li><a class="dropdown-item" onclick="reginsnormalcopy()" style="font-size:12px;color:gray;" data-toggle="tooltip" data-placement="top" title="Copy to Clipboard">Registration and Installation Template - NormalSyncPro</a></li>
+              <li><a class="dropdown-item" onclick="reginsapicopy()" style="font-size:12px;color:gray;" data-toggle="tooltip" data-placement="top" title="Copy to Clipboard">Registration and Installation Template - API</a></li>
+              <li><a class="dropdown-item" onclick="installationphase2contentcopy()" style="font-size:12px;color:gray;" data-toggle="tooltip" data-placement="top" title="Copy to Clipboard">Installation Phase 2 Template</a></li>
+              <li><a class="dropdown-item" onclick="synccheckcontentcopy()" style="font-size:12px;color:gray;" data-toggle="tooltip" data-placement="top" title="Copy to Clipboard">Sync Check Template</a></li>
+              <li><a class="dropdown-item" onclick="frequencyupdatecontentcopy()" style="font-size:12px;color:gray;" data-toggle="tooltip" data-placement="top" title="Copy to Clipboard">Frequency Update Template</a></li>
+              <li><a class="dropdown-item" onclick="reconnectionsevermovecontentcopy()" style="font-size:12px;color:gray;" data-toggle="tooltip" data-placement="top" title="Copy to Clipboard">Re-connection Template - Server Move</a></li>
+              <li><a class="dropdown-item" onclick="reconnectionupgradecontentcopy()" style="font-size:12px;color:gray;" data-toggle="tooltip" data-placement="top" title="Copy to Clipboard">Re-connection Template - Upgrade</a></li>
+              <li><a class="dropdown-item" onclick="uninstallcontentcopy()" style="font-size:12px;color:gray;" data-toggle="tooltip" data-placement="top" title="Copy to Clipboard">Uninstall Template</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" onclick="internalapplicationcontentcopy()" style="font-size:12px;color:gray;" data-toggle="tooltip" data-placement="top" title="Copy to Clipboard">Internal Meeting Template - Application</a></li>
+              <li><a class="dropdown-item" onclick="internalotherscontentcopy()" style="font-size:12px;color:gray;" data-toggle="tooltip" data-placement="top" title="Copy to Clipboard">Internal Meeting Template - Others</a></li>
+            </ul>
+
+            <script>
+            $(document).ready(function(){
+              $('[data-toggle="tooltip"]').tooltip();
+            });
+            </script>
+
+          <!--<button class="btn btn-outline-success" data-bs-toggle="modal" href="#projecttrackertoggle" type="button">Project Tracker</button>-->
+        </div>
+      </div>
+    </div>
+    <!--Registration and Installation Template - ODBC-->
+
+    <textarea class="visually-hidden" id="reginsodbccontent" style="font-size:10px;">
+ＲＥＧＩＳＴＲＡＴＩＯＮ   &   ＩＮＳＴＡＬＬＡＴＩＯＮ
+
+Date:
+Company Name:
+Commercient Attendees:
+Customer Attendees:
+Ticket Number:
+
+░ＢＥＦＯＲＥ   ＭＥＥＴＩＮＧ
+Verified License: Y/N
+Joined Chat: Y/N
+Reviewed Ticket: Y/N
+Onboarding Completed: Y/N
+
+Installation Support:
+Customer Success Manager:
+
+░ＲＥＧＩＳＴＲＡＴＩＯＮ
+2FA Completed: Y/N
+Package Installed: Y/N
+OAuth Completed: Y/N
+CRM Credentials Provided: Y/N
+
+Instance Name:
+History to Sync:
+Connection Type:
+
+░ＩＮＳＴＡＬＬＡＴＩＯＮ
+𝗣𝗵𝗮𝘀𝗲 𝟭: ERPName (Live/Test) - CRMName (Production/Sandbox)
+Server Name:
+Server Timezone:
+DSN Company Name:
+Filters Set:
+Test Connection Result:
+ODBC Frequency:
+CommercientODBC Frequency:
+Tables Confirmed: Y/N
+Data Received: Y/N
+
+𝗣𝗵𝗮𝘀𝗲 𝟮: CRMName (Production/Sandbox) - ERPName (Live/Test)
+Server Name:
+Server Timezone:
+TXDownloaderPro Frequency:
+Folder Permission Set: Y/N
+ERP Credentials Tested: Y/N
+Flags Updated: Y/N
+DLLs Downloaded: Y/N
+
+░ＮＯＴＥＳ
+┕━»
+
+░ＰＥＮＤＩＮＧ   ＴＡＳＫＳ
+┕━»
+
+░ＡＦＴＥＲ   ＭＥＥＴＩＮＧ
+Credentials Shared in Zoho Vault: Y/N
+Project Status Updated: Y/N
+Group Chat Updated: Y/N
+Ticket Updated: Y/N
+
+░ＲＥＣＯＲＤＩＮＧ
+Link:
+Passcode:
+
+░ＥＮＤ
+</textarea>
+
+    <!--Registration and Installation Template - NormalSyncPro-->
+    <textarea class="visually-hidden" id="reginsnormalcontent" style="font-size:10px;">
+ＲＥＧＩＳＴＲＡＴＩＯＮ   &   ＩＮＳＴＡＬＬＡＴＩＯＮ
+
+Date:
+Company Name:
+Commercient Attendees:
+Customer Attendees:
+Ticket Number:
+
+░ＢＥＦＯＲＥ   ＭＥＥＴＩＮＧ
+Verified License: Y/N
+Joined Chat: Y/N
+Reviewed Ticket: Y/N
+Onboarding Completed: Y/N
+
+Installation Support:
+Customer Success Manager:
+
+░ＲＥＧＩＳＴＲＡＴＩＯＮ
+2FA Completed: Y/N
+Package Installed: Y/N
+OAuth Completed: Y/N
+CRM Credentials Provided: Y/N
+
+Instance Name:
+History to Sync:
+Connection Type:
+
+░ＩＮＳＴＡＬＬＡＴＩＯＮ
+𝗣𝗵𝗮𝘀𝗲 𝟭: ERPName (Live/Test) - CRMName (Production/Sandbox)
+Server Name:
+Server Timezone:
+NormalSyncPro Frequency:
+Database Name:
+SQL Commercient Username:
+DBOwner Enabled: Y/N
+Tables Confirmed: Y/N
+Data Received: Y/N
+
+𝗣𝗵𝗮𝘀𝗲 𝟮: CRMName (Production/Sandbox) - ERPName (Live/Test)
+Server Name:
+Server Timezone:
+TXDownloaderPro Frequency:
+Folder Permission Set: Y/N
+ERP Credentials Tested: Y/N
+Flags Updated: Y/N
+DLLs Downloaded: Y/N
+
+░ＮＯＴＥＳ
+┕━»
+
+░ＰＥＮＤＩＮＧ   ＴＡＳＫＳ
+┕━»
+
+░ＡＦＴＥＲ   ＭＥＥＴＩＮＧ
+Credentials Shared in Zoho Vault: Y/N
+Project Status Updated: Y/N
+Group Chat Updated: Y/N
+Ticket Updated: Y/N
+
+░ＲＥＣＯＲＤＩＮＧ
+Link:
+Passcode:
+
+░ＥＮＤ
+</textarea>
+
+    <!--Registration and Installation Template - API-->
+    <textarea class="visually-hidden" id="reginsapicontent" style="font-size:10px;">
+ＲＥＧＩＳＴＲＡＴＩＯＮ   &   ＩＮＳＴＡＬＬＡＴＩＯＮ
+
+Date:
+Company Name:
+Commercient Attendees:
+Customer Attendees:
+Ticket Number:
+
+░ＢＥＦＯＲＥ   ＭＥＥＴＩＮＧ
+Verified License: Y/N
+Joined Chat: Y/N
+Reviewed Ticket: Y/N
+Onboarding Completed: Y/N
+
+Installation Support:
+Customer Success Manager:
+
+░ＲＥＧＩＳＴＲＡＴＩＯＮ
+2FA Completed: Y/N
+Package Installed: Y/N
+OAuth Completed: Y/N
+CRM Credentials Provided: Y/N
+
+Instance Name:
+History to Sync:
+Connection Type:
+
+░ＩＮＳＴＡＬＬＡＴＩＯＮ
+𝗣𝗵𝗮𝘀𝗲 𝟭: ERPName (Live/Test) - CRMName (Production/Sandbox)
+API Endpoints/URL:
+API Credentials Provided: Y/N
+Tables Confirmed: Y/N
+
+𝗣𝗵𝗮𝘀𝗲 𝟮: CRMName (Production/Sandbox) - ERPName (Live/Test)
+
+░ＮＯＴＥＳ
+┕━»
+
+░ＰＥＮＤＩＮＧ   ＴＡＳＫＳ
+┕━»
+
+░ＡＦＴＥＲ   ＭＥＥＴＩＮＧ
+Credentials Shared in Zoho Vault: Y/N
+Project Status Updated: Y/N
+Group Chat Updated: Y/N
+Ticket Updated: Y/N
+
+░ＲＥＣＯＲＤＩＮＧ
+Link:
+Passcode:
+
+░ＥＮＤ
+</textarea>
+
+<!--Installation Phase 2 Template-->
+<textarea class="visually-hidden" id="installationphase2content" style="font-size:10px;">
+ＩＮＳＴＡＬＬＡＴＩＯＮ   -   ＰＨＡＳＥ   ２
+
+Date:
+Company Name:
+Commercient Attendees:
+Customer Attendees:
+Ticket Number:
+Installation Support:
+Customer Success Manager:
+Instance Name:
+
+░ＩＮＳＴＡＬＬＡＴＩＯＮ
+𝗣𝗵𝗮𝘀𝗲 𝟮: CRMName (Production/Sandbox) - ERPName (Live/Test)
+Server Name:
+Server Timezone:
+TXDownloaderPro Frequency:
+Folder Permission Set: Y/N
+ERP Credentials Tested: Y/N
+Flags Updated: Y/N
+DLLs Downloaded: Y/N
+
+░ＮＯＴＥＳ
+┕━»
+
+░ＰＥＮＤＩＮＧ   ＴＡＳＫＳ
+┕━»
+
+░ＡＦＴＥＲ   ＭＥＥＴＩＮＧ
+Project Status Updated: Y/N
+Group Chat Updated: Y/N
+Ticket Updated: Y/N
+
+░ＲＥＣＯＲＤＩＮＧ
+Link:
+Passcode:
+
+░ＥＮＤ
+</textarea>
+
+    <!--Sync Check Template-->
+    <textarea class="visually-hidden" id="synccheckcontent" style="font-size:10px;">
+ＳＹＮＣ   ＣＨＥＣＫ
+
+Date:
+Commercient Attendees:
+Customer Attendees:
+Ticket Number:
+
+░ＮＯＴＥＳ
+Instance Name:
+Phase: 1 or 2
+Connection Type:
+Agenda:
+┕━»
+
+░ＰＥＮＤＩＮＧ   ＴＡＳＫＳ
+┕━»
+
+░ＲＥＣＯＲＤＩＮＧ
+Link:
+Passcode:
+
+░ＥＮＤ
+</textarea>
+
+    <!--Frequency Update Template-->
+    <textarea class="visually-hidden" id="frequencyupdatecontent" style="font-size:10px;">
+ＦＲＥＱＵＥＮＣＹ   ＵＰＤＡＴＥ
+
+Date:
+Commercient Attendees:
+Customer Attendees:
+Ticket Number:
+
+░ＮＯＴＥＳ
+Instance Name:
+Payment Completed: Y/N
+Old Frequency:
+Updated Frequency:
+Connection Tested: Successful/Failed
+┕━»
+
+░ＰＥＮＤＩＮＧ   ＴＡＳＫＳ
+┕━»
+
+░ＲＥＣＯＲＤＩＮＧ
+Link:
+Passcode:
+
+░ＥＮＤ
+</textarea>
+
+    <!--Re-connection Server Move Template-->
+    <textarea class="visually-hidden" id="reconnectionsevermovecontent" style="font-size:10px;">
+ＲＥＣＯＮＮＥＣＴＩＯＮ   -   ＳＥＲＶＥＲ   ＭＯＶＥ
+
+Date:
+Commercient Attendees:
+Customer Attendees:
+Ticket Number:
+Instance Name:
+Payment Completed: Y/N
+
+░ＯＬＤ   ＳＥＲＶＥＲ
+Old Server Name:
+Back-Up Completed: Y/N
+Old Server Uninstall Completed: Y/N
+
+░ＮＥＷ   ＳＥＲＶＥＲ
+New Server Name:
+New Server Timezone:
+New Server Install Completed: Y/N
+
+𝗣𝗵𝗮𝘀𝗲 𝟭
+Connection Type:
+Back-up Folder Restored: Y/N
+Setup Connection: Y/N
+Frequency Set: Y/N
+Tested Connection: Successful/Failed
+
+𝗣𝗵𝗮𝘀𝗲 𝟮
+Back-up Folder Restored: Y/N
+Frequency Set: Y/N
+Folder Permission Set: Y/N
+Flags Updated: Y/N
+DLLs Downloaded: Y/N
+Tested Connection: Successful/Failed
+
+░ＮＯＴＥＳ
+┕━»
+
+░ＰＥＮＤＩＮＧ   ＴＡＳＫＳ
+┕━»
+
+░ＲＥＣＯＲＤＩＮＧ
+Link:
+Passcode:
+
+░ＥＮＤ
+</textarea>
+
+    <!--Re-connection Upgrade Template-->
+    <textarea class="visually-hidden" id="reconnectionupgradecontent" style="font-size:10px;">
+ＲＥＣＯＮＮＥＣＴＩＯＮ   -   ＵＰＧＲＡＤＥ
+
+Date:
+Commercient Attendees:
+Customer Attendees:
+Ticket Number:
+Payment Completed: Y/N
+
+░ＮＯＴＥＳ
+Instance Name:
+Server Name:
+Back-up Completed: Y/N
+𝗣𝗵𝗮𝘀𝗲 𝟭
+Connection Type:
+DSN Setup Completed: Y/N
+Configuration Updated: Y/N
+Data Received: Y/N
+Tested Connection: Successful/Failed
+𝗣𝗵𝗮𝘀𝗲 𝟮
+Flags Updated: Y/N
+Tested Connection: Successful/Failed
+
+░ＡＤＤＩＴＩＯＮＡＬ   ＮＯＴＥＳ
+┕━»
+
+░ＰＥＮＤＩＮＧ   ＴＡＳＫＳ
+┕━»
+
+░ＲＥＣＯＲＤＩＮＧ
+Link:
+Passcode:
+
+░ＥＮＤ
+</textarea>
+
+    <!--Uninstall Template-->
+    <textarea class="visually-hidden" id="uninstallcontent" style="font-size:10px;">
+ＵＮＩＮＳＴＡＬＬ
+
+Date:
+Commercient Attendees:
+Customer Attendees:
+Ticket Number:
+
+░ＮＯＴＥＳ
+Instance Name:
+Server Name:
+Task Disabled: Y/N
+Commercient Application Uninstalled: Y/N
+Commercient Folder Deleted: Y/N
+Task Removed: Y/N
+
+░ＡＤＤＩＴＩＯＮＡＬ   ＮＯＴＥＳ
+┕━»
+
+░ＰＥＮＤＩＮＧ   ＴＡＳＫＳ
+┕━»
+
+░ＲＥＣＯＲＤＩＮＧ
+Link:
+Passcode:
+
+░ＥＮＤ
+</textarea>
+
+<!--Internal Meeting Template - Application -->
+<textarea class="visually-hidden" id="internalapplicationcontent" style="font-size:10px;">
+ＩＮＴＥＲＮＡＬ   ＭＥＥＴＩＮＧ   -   ＡＰＰＬＩＣＡＴＩＯＮ
+
+Date:
+Ticket Number:
+Installation Support:
+Application Support:
+Instance Name:
+
+░ＮＯＴＥＳ
+┕━»
+
+░ＰＥＮＤＩＮＧ   ＴＡＳＫＳ
+┕━»
+
+░ＡＦＴＥＲ   ＭＥＥＴＩＮＧ
+Project Status Updated: Y/N
+Group Chat Updated: Y/N
+Ticket Updated: Y/N
+
+░ＲＥＣＯＲＤＩＮＧ
+Link:
+Passcode:
+
+░ＥＮＤ
+</textarea>
+
+<!--Internal Meeting Template - Others -->
+<textarea class="visually-hidden" id="internalotherscontent" style="font-size:10px;">
+ＩＮＴＥＲＮＡＬ   ＭＥＥＴＩＮＧ   -   ＯＴＨＥＲＳ
+
+Date:
+Attendees:
+Ticket Number:
+Instance Name:
+
+░ＮＯＴＥＳ
+┕━»
+
+░ＰＥＮＤＩＮＧ   ＴＡＳＫＳ
+┕━»
+
+░ＲＥＣＯＲＤＩＮＧ
+Link:
+Passcode:
+
+░ＥＮＤ
+</textarea>
+
+    <script>
+      function reginsodbccopy() {
+        var copyText = document.getElementById("reginsodbccontent").value;
+        navigator.clipboard.writeText(copyText);
+      }
+    </script>
+
+    <script>
+      function reginsnormalcopy() {
+        var copyText = document.getElementById("reginsnormalcontent").value;
+        navigator.clipboard.writeText(copyText);
+      }
+    </script>
+
+    <script>
+      function reginsapicopy() {
+        var copyText = document.getElementById("reginsapicontent").value;
+        navigator.clipboard.writeText(copyText);
+      }
+    </script>
+
+    <script>
+      function synccheckcontentcopy() {
+        var copyText = document.getElementById("synccheckcontent").value;
+        navigator.clipboard.writeText(copyText);
+      }
+    </script>
+
+    <script>
+      function installationphase2contentcopy() {
+        var copyText = document.getElementById("installationphase2content").value;
+        navigator.clipboard.writeText(copyText);
+      }
+    </script>
+
+
+    <script>
+      function frequencyupdatecontentcopy() {
+        var copyText = document.getElementById("frequencyupdatecontent").value;
+        navigator.clipboard.writeText(copyText);
+      }
+    </script>
+
+    <script>
+      function reconnectionsevermovecontentcopy() {
+        var copyText = document.getElementById("reconnectionsevermovecontent").value;
+        navigator.clipboard.writeText(copyText);
+      }
+    </script>
+
+    <script>
+      function reconnectionupgradecontentcopy() {
+        var copyText = document.getElementById("reconnectionupgradecontent").value;
+        navigator.clipboard.writeText(copyText);
+      }
+    </script>
+
+    <script>
+      function uninstallcontentcopy() {
+        var copyText = document.getElementById("uninstallcontent").value;
+        navigator.clipboard.writeText(copyText);
+      }
+    </script>
+
+    <script>
+      function internalapplicationcontentcopy() {
+        var copyText = document.getElementById("internalapplicationcontent").value;
+        navigator.clipboard.writeText(copyText);
+      }
+    </script>
+
+    <script>
+      function internalotherscontentcopy() {
+        var copyText = document.getElementById("internalotherscontent").value;
+        navigator.clipboard.writeText(copyText);
+      }
+    </script>
+
+    <!--Meeting Tracker-->
+    <div class="modal fade" id="meetingtrackertoggle" aria-hidden="true" aria-labelledby="meetingtrackertogglelabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!--Meeting Tracker Form-->
+            <form style="margin-top:20px;font-size:10px;color:gray;" action="">
+              <h6 class="modal-title" id="meetingtrackertogglelabel" style="text-align:center;margin-bottom:30px;">MEETING TRACKER</h6>
+
+              <div class="container text-left">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-6">
+
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                    <label style="padding-top:7px;">
+                      <small>DATE</small>
+                    </label>
+                  </div>
+                  <div class="col">
+                    <input name="Date" type="Date" class="form-control" id="date" placeholder="Date" style="font-size:10px;color:gray;">
+                  </div>
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                  </div>
+
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                    <label style="padding-top:7px;">
+                      <small>INSTANCE NAME</small>
+                    </label>
+                  </div>
+                  <div class="col">
+                    <input name="Instance Name" type="text" class="form-control" id="instancename" placeholder="Instance Name" style="font-size:10px;color:gray;">
+                  </div>
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                  </div>
+
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                    <label style="padding-top:7px;">
+                      <small>TICKET NUMBER</small>
+                    </label>
+                  </div>
+                  <div class="col">
+                    <input name="Ticket Number" type="text" class="form-control" id="ticketnumber" placeholder="Ticket Number" style="font-size:10px;color:gray;">
+                  </div>
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                  </div>
+
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                    <label style="padding-top:7px;">
+                      <small>MEETING TYPE</small>
+                    </label>
+                  </div>
+                  <div class="col">
+                    <select name="Meeting Type" class="form-select" id="meetingtype" style="font-size:10px;color:gray;">
+                      <option selected>Not Available</option>
+                      <option value="Registration & Installation">Registration & Installation</option>
+                      <option value="Installation - Phase 1">Installation - Phase 1</option>
+                      <option value="Installation - Phase 2">Installation - Phase 2</option>
+                      <option value="Sync Check - Phase 1">Sync Check - Phase 1</option>
+                      <option value="Sync Check - Phase 2">Sync Check - Phase 2</option>
+                      <option value="Frequency Update">Frequency Update</option>
+                      <option value="Re-connection">Re-connection</option>
+                      <option value="Uninstall">Uninstall</option>
+                      <option value="Internal Meeting">Internal Meeting</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                  </div>
+
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                    <label style="padding-top:7px;">
+                      <small>ERP SYSTEM</small>
+                    </label>
+                  </div>
+                  <div class="col">
+                    <select name="ERP" class="form-select" id="erpsystem" style="font-size:10px;color:gray;">
+                      <option selected>Not Available</option>
+                      <option value="ABASBUSINESSSOFTWARE">ABASBUSINESSSOFTWARE</option>
+                      <option value="ACUMATICA">ACUMATICA</option>
+                      <option value="ACUMATICACLOUD">ACUMATICACLOUD</option>
+                      <option value="AGRIBUSINESS">AGRIBUSINESS</option>
+                      <option value="APTEANINTUITIVE">APTEANINTUITIVE</option>
+                      <option value="APTEANMADE2MANAGE">APTEANMADE2MANAGE</option>
+                      <option value="APTEANROSS">APTEANROSS</option>
+                      <option value="BAAN">BAAN</option>
+                      <option value="COMMERCIENTCPQ">COMMERCIENTCPQ</option>
+                      <option value="DELTEK">DELTEK</option>
+                      <option value="DELTEKCOSTPOINT">DELTEKCOSTPOINT</option>
+                      <option value="DOCUMENTSYNC">DOCUMENTSYNC</option>
+                      <option value="DYNAMICSBUSINESSCENTRAL">DYNAMICSBUSINESSCENTRAL</option>
+                      <option value="ECIEAUTOMATE">ECIEAUTOMATE</option>
+                      <option value="ECIM1">ECIM1</option>
+                      <option value="EDESKMYSQL">EDESKMYSQL</option>
+                      <option value="EPICOR10">EPICOR10</option>
+                      <option value="EPICOR10CLOUD">EPICOR10CLOUD</option>
+                      <option value="EPICOR9">EPICOR9</option>
+                      <option value="EPICORBISTRACK">EPICORBISTRACK</option>
+                      <option value="EPICORCLOUD">EPICORCLOUD</option>
+                      <option value="EPICOREAGLE">EPICOREAGLE</option>
+                      <option value="EPICORKINECT">EPICORKINECT</option>
+                      <option value="EPICORP21">EPICORP21</option>
+                      <option value="ESOLVER">ESOLVER</option>
+                      <option value="EXACTGLOBENEXT">EXACTGLOBENEXT</option>
+                      <option value="EXACTMAX">EXACTMAX</option>
+                      <option value="EXACTONLINE">EXACTONLINE</option>
+                      <option value="GLOBALSHOP">GLOBALSHOP</option>
+                      <option value="GLOBALSHOP2020">GLOBALSHOP2020</option>
+                      <option value="IFS10">IFS10</option>
+                      <option value="IFS9">IFS9</option>
+                      <option value="IFSERP">IFSERP</option>
+                      <option value="INFOR10DISTRIBUTIONBUSINESS">INFOR10DISTRIBUTIONBUSINESS</option>
+                      <option value="INFORA">INFORA</option>
+                      <option value="INFORCLOUDSUITE">INFORCLOUDSUITE</option>
+                      <option value="INFORFACTS">INFORFACTS</option>
+                      <option value="INFORFOURTHSHIFT">INFORFOURTHSHIFT</option>
+                      <option value="INFORLN6">INFORLN6</option>
+                      <option value="INFORM3">INFORM3</option>
+                      <option value="INFORM3QM">INFORM3QM</option>
+                      <option value="INFORM3V92">INFORM3V92</option>
+                      <option value="INFORSXE">INFORSXE</option>
+                      <option value="INFORSYTELINEV705">INFORSYTELINEV705</option>
+                      <option value="INFORSYTELINEV9">INFORSYTELINEV9</option>
+                      <option value="INFORVISUAL">INFORVISUAL</option>
+                      <option value="INFORVISUAL712">INFORVISUAL712</option>
+                      <option value="INFORVISUAL9">INFORVISUAL9</option>
+                      <option value="INFORXA">INFORXA</option>
+                      <option value="INTACCT">INTACCT</option>
+                      <option value="IOT">IOT</option>
+                      <option value="IQMS">IQMS</option>
+                      <option value="JDEdwards">JDEdwards</option>
+                      <option value="JOBBOSS">JOBBOSS</option>
+                      <option value="MACOLA10">MACOLA10</option>
+                      <option value="MACOLAES">MACOLAES</option>
+                      <option value="MACOLAGLOBE">MACOLAGLOBE</option>
+                      <option value="MACOLAPROGRESSION">MACOLAPROGRESSION</option>
+                      <option value="MACONOMY">MACONOMY</option>
+                      <option value="MICROSOFTBUSINESSCENTRAL">MICROSOFTBUSINESSCENTRAL</option>
+                      <option value="MSDYNAMICAX">MSDYNAMICAX</option>
+                      <option value="MSDYNAMICGP2013">MSDYNAMICGP2013</option>
+                      <option value="MSDYNAMICGP2016">MSDYNAMICGP2016</option>
+                      <option value="MSDYNAMICGP2017">MSDYNAMICGP2017</option>
+                      <option value="MSDYNAMICNAV">MSDYNAMICNAV</option>
+                      <option value="MSDYNAMICSAXXSQL">MSDYNAMICSAXXSQL</option>
+                      <option value="MSDYNAMICSL2015">MSDYNAMICSL2015</option>
+                      <option value="MYOBACCOUNTRIGHT">MYOBACCOUNTRIGHT</option>
+                      <option value="MYOBADVANCED">MYOBADVANCED</option>
+                      <option value="MYOBEXO">MYOBEXO</option>
+                      <option value="NETSUITE">NETSUITE</option>
+                      <option value="OracleEBS">OracleEBS</option>
+                      <option value="ORACLEEBUSINESSSUITE">ORACLEEBUSINESSSUITE</option>
+                      <option value="OWNERSHIP">OWNERSHIP</option>
+                      <option value="PLEX">PLEX</option>
+                      <option value="PROCESSPRO">PROCESSPRO</option>
+                      <option value="QADERP">QADERP</option>
+                      <option value="QUICKBOOK">QUICKBOOK</option>
+                      <option value="QUICKBOOKONLINE">QUICKBOOKONLINE</option>
+                      <option value="QUICKBOOKPOS">QUICKBOOKPOS</option>
+                      <option value="SAGE100">SAGE100</option>
+                      <option value="SAGE1000">SAGE1000</option>
+                      <option value="SAGE1002013V5">SAGE1002013V5</option>
+                      <option value="SAGE1002014">SAGE1002014</option>
+                      <option value="SAGE1002015">SAGE1002015</option>
+                      <option value="SAGE1002016">SAGE1002016</option>
+                      <option value="SAGE1002017">SAGE1002017</option>
+                      <option value="SAGE100C2018">SAGE100C2018</option>
+                      <option value="SAGE100CANADA">SAGE100CANADA</option>
+                      <option value="SAGE100CONTRACTOR2014">SAGE100CONTRACTOR2014</option>
+                      <option value="SAGE100CONTRACTOR2018">SAGE100CONTRACTOR2018</option>
+                      <option value="SAGE100CONTRACTOR2019">SAGE100CONTRACTOR2019</option>
+                      <option value="SAGE100FRANCE">SAGE100FRANCE</option>
+                      <option value="SAGE100GERMANY">SAGE100GERMANY</option>
+                      <option value="SAGE100MASTERBUILD">SAGE100MASTERBUILD</option>
+                      <option value="SAGE100PREMIUM">SAGE100PREMIUM</option>
+                      <option value="SAGE100US">SAGE100US</option>
+                      <option value="SAGE200EVOLUTION">SAGE200EVOLUTION</option>
+                      <option value="SAGE200UK">SAGE200UK</option>
+                      <option value="SAGE200US">SAGE200US</option>
+                      <option value="SAGE300">SAGE300</option>
+                      <option value="Sage300CRE">Sage300CRE</option>
+                      <option value="SAGE500">SAGE500</option>
+                      <option value="Sage50CA">Sage50CA</option>
+                      <option value="SAGE50CLOUD">SAGE50CLOUD</option>
+                      <option value="SAGE50UK">SAGE50UK</option>
+                      <option value="SAGE50US">SAGE50US</option>
+                      <option value="SAGEBUSINESSWORKS">SAGEBUSINESSWORKS</option>
+                      <option value="SAGEINTACCT">SAGEINTACCT</option>
+                      <option value="SAGELIVE">SAGELIVE</option>
+                      <option value="SAGEMASS90">SAGEMASS90</option>
+                      <option value="SAGEONE">SAGEONE</option>
+                      <option value="SAGEPRO">SAGEPRO</option>
+                      <option value="SAGEQUANTUM">SAGEQUANTUM</option>
+                      <option value="SAGEX3">SAGEX3</option>
+                      <option value="SAPB1">SAPB1</option>
+                      <option value="SAPB1CLOUD">SAPB1CLOUD</option>
+                      <option value="SAPBUSINESSBYDESIGN">SAPBUSINESSBYDESIGN</option>
+                      <option value="SAPHANA">SAPHANA</option>
+                      <option value="SOUTHWARE">SOUTHWARE</option>
+                      <option value="STEELVIKING">STEELVIKING</option>
+                      <option value="SYSPRO">SYSPRO</option>
+                      <option value="SYSPRO60">SYSPRO60</option>
+                      <option value="SYSPRO61">SYSPRO61</option>
+                      <option value="SYSPRO7">SYSPRO7</option>
+                      <option value="TRAVERSE">TRAVERSE</option>
+                      <option value="TRAVERSECLOUD">TRAVERSECLOUD</option>
+                      <option value="TRAVERSEPROCESSPROGLOBAL">TRAVERSEPROCESSPROGLOBAL</option>
+                      <option value="VAIS2K">VAIS2K</option>
+                      <option value="WORKDAY">WORKDAY</option>
+                      <option value="XERO">XERO</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                  </div>
+
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                    <label style="padding-top:7px;">
+                      <small>CRM SYSTEM</small>
+                    </label>
+                  </div>
+                  <div class="col">
+                    <select name="CRM" class="form-select" id="crmsystem" style="font-size:10px;color:gray;">
+                      <option selected>Not Available</option>
+                      <option value="AmazonSellerCentral">AmazonSellerCentral</option>
+                      <option value="BestCPQ">BestCPQ</option>
+                      <option value="DynamicCRM">DynamicCRM</option>
+                      <option value="HubSpot">HubSpot</option>
+                      <option value="IOTSync">IOTSync</option>
+                      <option value="MEGENTO">MEGENTO</option>
+                      <option value="PipeDrive">PipeDrive</option>
+                      <option value="Salesforce">Salesforce</option>
+                      <option value="Shopify">Shopify</option>
+                      <option value="Trello">Trello</option>
+                      <option value="WooCommerce">WooCommerce</option>
+                      <option value="ZohoCRM">ZohoCRM</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                  </div>
+
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                    <label style="padding-top:7px;">
+                      <small>CONSULTANT</small>
+                    </label>
+                  </div>
+                  <div class="col">
+                    <select name="Installation Support" class="form-select" id="installationsupport" style="font-size:10px;color:gray;">
+                      <option selected>Not Available</option>
+                      <option value="Diego">Diego</option>
+                      <option value="Edgar">Edgar</option>
+                      <option value="Ellen">Ellen</option>
+                      <option value="Enrico">Enrico</option>
+                      <option value="Erick">Erick</option>
+                      <option value="Ernest">Ernest</option>
+                      <option value="Fausto">Fausto</option>
+                      <option value="Francisco">Francisco</option>
+                      <option value="Kirk">Kirk</option>
+                      <option value="Kevin">Kevin</option>
+                      <option value="Marianna">Marianna</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                  </div>
+
+                  <textarea name="Notes" class="form-control" placeholder="Leave a note here...." id="floatingTextarea2" style="height: 100px;width:30%;font-size:10px;color:gray;margin:10px auto 40px auto;"></textarea>
+
+                </div>
+              </div>
+
+              <!--Form Footer-->
+              <div class="modal-footer" style="font-size:10px;height:40px;">
+                <button type="submit" class="btn btn-outline-success btn-sm" style="font-size:10px;">Save</button>
+                <button type="reset" class="btn btn-outline-dark btn-sm" style="font-size:10px;">Clear</button>
+                <button type="button" class="btn btn-warning btn-sm" style="font-size:10px; margin-left:20px;" data-bs-target="#meetingtrackerreporttoggle" data-bs-toggle="modal">View Report</button>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Meeting Tracker Report-->
+    <div class="modal fade" id="meetingtrackerreporttoggle" aria-hidden="true" aria-labelledby="meetingtrackerreporttogglelabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h6 class="modal-title" id="meetingtrackerreporttogglelabel" style="text-align:center;margin-bottom:30px;margin-top:20px;color:gray;">MEETING TRACKER REPORT</h6>
+            <iframe width="1100" height="550" src="https://datastudio.google.com/embed/reporting/f2ceb67d-2c96-4ef7-8e1a-cc9387aa05cd/page/cVhzC" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+            <div class="modal-footer" style="font-size:10px;height:40px;">
+              <button type="button" class="btn btn-warning btn-sm" style="font-size:10px; margin-left:20px;" data-bs-target="#meetingtrackertoggle" data-bs-toggle="modal">Go Back to Meeting Tracker</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+
+</html>
